@@ -29,7 +29,19 @@
   
 </head>
 <body>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a[data-lightbox]").forEach(el => {
+            el.addEventListener("touchend", function (e) {
+                e.preventDefault(); // Zapobiega domyślnemu działaniu
+                e.stopPropagation(); // Blokuje bąbelkowanie zdarzenia
+                this.click(); // Symuluje kliknięcie
+            });
+        });
+    });
+</script>
+
   <section data-bs-version="5.1" class="menu menu2 cid-tJS6tZXiPa" once="menu" id="menu02-0">
 	
 
