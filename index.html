@@ -24,29 +24,28 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=UftxLj"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=UftxLj" type="text/css">
 
-  
+  <!-- Lightbox CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+<!-- Lightbox JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
   
   
 </head>
 <body>
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll("a[data-lightbox]").forEach(el => {
-            el.addEventListener("click", function (e) {
-                e.preventDefault();
-                lightbox.start(el);
-            });
-
-            el.addEventListener("touchend", function (e) {
+        document.querySelectorAll(".item-wrapper img").forEach(img => {
+            img.addEventListener("touchend", function (e) {
                 e.preventDefault();
                 e.stopPropagation();
-                setTimeout(() => {
-                    this.click();
-                }, 100);
+                this.click(); // Symulujemy kliknięcie
             });
         });
     });
 </script>
+
+
 
 
   <section data-bs-version="5.1" class="menu menu2 cid-tJS6tZXiPa" once="menu" id="menu02-0">
