@@ -25,7 +25,13 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css?v=johng9"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css?v=johng9" type="text/css">
 
-  
+  <style>
+.zoom-icon {
+    z-index: 1000 !important;
+    pointer-events: auto !important;
+}
+</style>
+
   
   
 </head>
@@ -374,5 +380,17 @@
             
         </div>
     </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a[data-lightbox]").forEach(el => {
+        el.addEventListener("touchend", function (e) {
+            e.preventDefault();
+            this.click();
+        });
+    });
+});
+</script>
+
   </body>
 </html>
